@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>No Dues Certificate</title>
+    <style>
+        body {
+            /* Adjusted margin to 1.5cm to reduce extra space */
+            font-family: Arial, sans-serif;
+            margin: 1.5cm;
+            line-height: 1.5;
+            font-size: 10pt; /* Slightly smaller font for a cleaner document look */
+        }
+        .header-title {
+            text-align: center;
+            font-size: 16pt;
+            margin-bottom: 2cm; /* Increased space after the main title */
+        }
+        .address-date-row {
+            display: flex;
+            justify-content: space-between; /* Pushes To/Bajaj left and Date right */
+            margin-bottom: 0.5cm;
+            line-height: 1.3;
+        }
+        .subject-container {
+            /* Mimics the highlighted look in the reference image */
+            background-color: #e9f0ff; /* Light blue background */
+            border: 1px solid #c9d8ff;
+            padding: 8px 10px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        .subject {
+            font-weight: bold;
+            text-decoration: none; /* No underline on the text itself */
+            display: block; /* Ensures the text takes the full padded area */
+            color: #000;
+        }
+        .signature-block {
+            margin-top: 2rem;
+            line-height: 1.8;
+            /* Use a simple grid or table layout for clean alignment if necessary,
+               but for simplicity, we'll use inline-blocks/flex for now if needed. */
+        }
+        .note-container {
+            /* Mimics the highlighted look at the bottom */
+            background-color: #e9f0ff; /* Light blue background */
+            border: 1px solid #c9d8ff;
+            padding: 8px 10px;
+            margin-top: 5rem;
+            font-size: 9pt;
+        }
+        .content-paragraph {
+            text-align: justify;
+            margin-bottom: 12px;
+        }
+        .spacer {
+            margin-top: 1cm;
+        }
+        .highlight {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- YANTRAM MOBILE - Centered -->
+    <div class="header-title">
+        <p><strong>YANTRAM MOBILE</strong></p>
+    </div>
+
+    <!-- Recipient and Date - Side by Side -->
+    <div class="address-date-row">
+        <div>
+            <p>To,</p>
+            <p>Bajaj Finance Limited</p>
+        </div>
+        <div>
+            <p>Date: {{ current_date }}</p>
+        </div>
+    </div>
+
+    <p>Dear Sir/Madam,</p>
+
+    <!-- SUBJECT Line - Highlighted Box -->
+    <div class="subject-container">
+        <span class="subject">
+            SUBJECT : NO DUES CERTIFICATE CUM DECLARATION IN RESPECT OF
+            <br>THE PAYOUTS
+        </span>
+    </div>
+
+    <!-- Body Paragraph 1 -->
+    <p class="content-paragraph">
+        This is to certify that as per the terms of the Agreement between <span class="highlight">60063632-YANTRAM MOBILE</span>
+        and Bajaj Finance Limited ("BFL"), We have provided Services to BFL under the
+        Agreement.
+    </p>
+
+    <!-- Body Paragraph 2 -->
+    <p class="content-paragraph">
+        This is to further certify that BFL has no dues or outstanding amounts owing to <span class="highlight">60063632-YANTRAM MOBILE</span>
+        as per the terms of the Agreement between <span class="highlight">60063632-YANTRAM MOBILE</span> and BFL.
+        any and all monies payable by BFL for the said term have been paid and
+        settled by BFL in full to <span class="highlight">60063632-YANTRAM MOBILE</span> for <span class="highlight">{{ month_text }}</span>.
+    </p>
+
+    <div class="spacer"></div>
+
+    <p>Warm regards,</p>
+
+    <div class="signature-block">
+        <p>Dealer Name: <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></p>
+        <p>Dealer ID: <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></p>
+        <p>Signing Authority Name:</p>
+        <p>Signature And Stamp :</p>
+    </div>
+
+    <!-- NOTE Block - Highlighted Box -->
+    <div class="note-container">
+        <p style="margin:0;">
+            <span class="highlight">NOTE:</span> Hard copy to be maintained by the Dealer/Service provider and the
+            same shall be produced to BFL as and when required
+        </p>
+    </div>
+
+</body>
+</html>
