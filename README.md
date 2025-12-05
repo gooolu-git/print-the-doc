@@ -1,142 +1,141 @@
-print-the-doc
-Overview
 
-This is a simple, yet robust, Flask web application designed to demonstrate the generation of stylized PDF reports from dynamic HTML content. It features a Bootstrap-themed landing page where users can select report parameters (like the month) before generating and downloading a clean, professional PDF file. The application leverages the power of Python's Flask framework combined with Flask-WeasyPrint for high-fidelity PDF output.
+# **Print-the-doc – PDF Report Generator**
 
-The frontend uses Bootstrap 5 for a responsive, modern user interface, ensuring a good experience both on the web and in the final printed document.
+A simple, clean, and powerful **Flask web application** for generating **professional PDF reports** from dynamic HTML content. Users can choose report parameters (like month) and instantly download a beautifully styled PDF.
 
-Features
+Built with **Flask**, **Flask-WeasyPrint**, **Bootstrap 5**, and **Jinja2**.
 
-Parameter Selection: A dedicated landing page allows users to select the month for which they want to generate a sales report.
+---
 
-Dynamic PDF Generation: Generates a full PDF document on the fly based on the selected parameters.
+## **✨ Overview**
 
-High-Fidelity Output: Uses WeasyPrint to convert HTML/CSS templates into pixel-perfect PDF documents, preserving styling and layout.
+This project demonstrates:
 
-Bootstrap Styling: Utilizes Bootstrap 5 for clean, professional, and responsive web interface design and PDF report styling.
+- A **Bootstrap-styled landing page** for selecting report parameters.
+- **Dynamic PDF generation** using WeasyPrint.
+- Clean and responsive design that looks great both in the browser and in the final PDF.
+- A minimal yet scalable architecture built with Flask.
 
-Technologies Used
+---
 
-Category
+## **🔥 Features**
 
-Technology
+- **🗓 Parameter Selection:**  
+  A dedicated landing page to select the month for generating a sales report.
 
-Purpose
+- **📄 Dynamic PDF Generation:**  
+  Converts HTML templates into a complete PDF on-the-fly.
 
-Backend
+- **🎨 High-Fidelity Output:**  
+  WeasyPrint ensures pixel-perfect PDF styling with full HTML/CSS support.
 
-Python 3
+- **📱 Responsive UI:**  
+  Built using Bootstrap 5 for a modern, mobile-friendly design.
 
-Core application logic and server runtime.
+---
 
-Web Framework
+## **🛠 Technologies Used**
 
-Flask
+| **Category**        | **Technology**      | **Purpose** |
+|---------------------|---------------------|-------------|
+| Backend             | **Python 3**        | Core logic & server runtime |
+| Web Framework       | **Flask**           | Routing, request handling |
+| PDF Generation      | **Flask-WeasyPrint** | Convert HTML/CSS → PDF |
+| HTML Templating     | **Jinja2**          | Dynamic HTML rendering |
+| Frontend Styling    | **Bootstrap 5**     | Responsive UI |
 
-Micro web framework for routing and handling requests.
+---
 
-PDF Generation
+## **⚙ Installation**
 
-Flask-WeasyPrint
+### **📌 Prerequisites**
 
-Extension for generating PDF documents from HTML/CSS.
+- Python 3 installed
 
-HTML Templating
+### **📦 System Dependencies (Required for WeasyPrint)**
 
-Jinja2
-
-Used by Flask to render dynamic HTML templates.
-
-Frontend Styling
-
-Bootstrap 5
-
-CSS framework for responsive design and UI components.
-
-Installation
-
-Prerequisites
-
-You need Python 3 installed on your system.
-
-Crucial Dependency: Flask-WeasyPrint relies on the WeasyPrint library, which requires specific system dependencies to handle rendering and fonts (like Pango, Cairo, and Glib).
-
-On Debian/Ubuntu, install the dependencies first:
-
+#### **Ubuntu/Debian**
+```bash
 sudo apt update
 sudo apt install python3-dev libxml2-dev libxslt1-dev libgomp1 libpango1.0-0
+```
 
-
-On macOS (using Homebrew):
-
+#### **macOS (Homebrew)**
+```bash
 brew install cairo pango gdk-pixbuf libffi
+```
 
+---
 
-Setup Steps
+## **📁 Setup Steps**
 
-Clone the Repository (or create the file structure):
-
-If you are setting this up manually, create the necessary folders:
-
+### **1️⃣ Create Project Structure**
+```bash
 mkdir pdf_app
 cd pdf_app
 mkdir templates static
-# Now save app.py, landing.html, report.html, and style.css into their respective locations.
+```
 
+Save these files:
 
-Create requirements.txt:
+- `app.py`
+- `templates/landing.html`
+- `templates/report.html`
+- `static/style.css`
 
+---
+
+### **2️⃣ Create requirements.txt**
+```
 Flask
 Flask-WeasyPrint
+```
 
+---
 
-Install Python Packages:
-
+### **3️⃣ Install Python Packages**
+```bash
 pip install -r requirements.txt
+```
 
+---
 
-Usage
+## **▶ Usage**
 
-Run the Flask application:
-
+### **Run the application**
+```bash
 python app.py
+```
 
+➡ App runs at: **http://127.0.0.1:5000/**
 
-The application will start, usually accessible at http://127.0.0.1:5000/.
+### **Generate PDF Report**
+1. Open the landing page  
+2. Select a month  
+3. Click **"Submit & Generate PDF"**  
+4. Your file (e.g., `sales_report_November_2025.pdf`) will download automatically  
 
-Access the Landing Page:
+---
 
-Open the URL in your web browser. You will be presented with the "Gemini Analytics" landing page.
+## **📂 Project Structure**
 
-Generate Report:
+```
+pdf_app/
+├── app.py
+├── requirements.txt
+├── templates/
+│   ├── landing.html
+│   └── report.html
+└── static/
+    └── style.css
+```
 
-Select a month from the dropdown menu.
+---
 
-Click the "Submit & Generate PDF" button.
+## **👤 Author**
 
-A new browser tab will open, and the PDF file (e.g., sales_report_November_2025.pdf) will automatically download.
+**gooolu-git**  
+GitHub: https://github.com/gooolu-git  
 
-Project Structure
-
-app.py: Main Flask application file. Defines routes, data, and PDF generation logic.
-
-requirements.txt: Lists Python dependencies.
-
-templates/: Directory for Jinja2 HTML template files.
-
-landing.html: The Bootstrap-themed front page for parameter selection.
-
-report.html: The HTML template used by WeasyPrint to generate the PDF content.
-
-static/: Directory for static assets.
-
-style.css: Minimal CSS overrides and print-specific rules.
-
-Author
-
-gooolu-git
-
-GitHub: https://github.com/gooolu-git
-
-Note: This is a placeholder GitHub profile as requested.
+## live application:- 
 https://printum-pdf-generator.onrender.com/
